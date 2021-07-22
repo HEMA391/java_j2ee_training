@@ -9,6 +9,9 @@ public class ExecutorDemo {
 		// single thread executor is a single 1 off thread for fire and forget
 		ExecutorService executorService=Executors.newSingleThreadExecutor();
 		executorService.submit((Runnable) ()-> test());
+		
+		// Its required to shutdownt the service
+		executorService.shutdown();
 	}
 
 	public static String test() {
