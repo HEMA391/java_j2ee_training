@@ -30,7 +30,8 @@ public class ObservableToFlowable {
 		TestSubscriber<Integer> testSubscriber = (TestSubscriber<Integer>) observable
 				.toFlowable(BackpressureStrategy.BUFFER).observeOn(Schedulers.computation()).test();
 		testSubscriber.awaitTerminalEvent();
-
+		
+		
 		List<Integer> receivedInts = testSubscriber.getEvents().get(0).stream().mapToInt(object -> (int) object).boxed()
 				.collect(Collectors.toList());
 		System.out.println("Integers received"+receivedInts.toString());
