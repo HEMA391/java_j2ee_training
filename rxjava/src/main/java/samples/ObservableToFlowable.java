@@ -26,7 +26,6 @@ public class ObservableToFlowable {
 		@SuppressWarnings("unchecked")
 		Observable<T> observable = Observable.fromIterable(testList);
 		
-		
 		@SuppressWarnings("unchecked")
 		TestSubscriber<Integer> testSubscriber = (TestSubscriber<Integer>) observable
 				.toFlowable(BackpressureStrategy.BUFFER).observeOn(Schedulers.computation()).test();
