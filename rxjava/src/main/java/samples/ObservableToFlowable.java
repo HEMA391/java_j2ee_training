@@ -14,8 +14,7 @@ import io.reactivex.subscribers.TestSubscriber;
 public class ObservableToFlowable {
 
 	public static void main(String[] args) {
-		thenAllValuesAreBufferedAndReceived();
-		
+		thenAllValuesAreBufferedAndReceived();		
 	}
 
 	public static <T> void thenAllValuesAreBufferedAndReceived() {
