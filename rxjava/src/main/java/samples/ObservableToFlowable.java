@@ -15,6 +15,7 @@ public class ObservableToFlowable {
 
 	public static void main(String[] args) {
 		thenAllValuesAreBufferedAndReceived();
+		
 	}
 
 	public static <T> void thenAllValuesAreBufferedAndReceived() {
