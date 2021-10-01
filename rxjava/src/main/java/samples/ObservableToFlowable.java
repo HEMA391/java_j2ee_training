@@ -20,8 +20,7 @@ public class ObservableToFlowable {
 	public static <T> void thenAllValuesAreBufferedAndReceived() {
 		List testList = new ArrayList<>();
 		testList.add(10);
-		System.out.println("Integers in list"+testList.toString());
-	
+		System.out.println("Integers in list"+testList.toString());	
 		@SuppressWarnings("unchecked")
 		Observable<T> observable = Observable.fromIterable(testList);
 		
